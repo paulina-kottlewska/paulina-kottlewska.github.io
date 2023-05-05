@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/257fb5feca.js" crossorigin="anonymous"></script>
+
+    <title>Personal Website</title>
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="index.html#projects" class="nav-link">My Projects</a></li>
+                <li class="nav-item"><a href="index.html#education" class="nav-link">Education and Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <h1 class="section-title section-title-intro project-title-intro">
+            <strong>Interactive</strong><span class="project-intro">Personal Website</span>
+        </h1>
+        <!--https://unsplash.com/photos/-fFRcwJ9JYg?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink Photo by Mingdi Li on Unsplash-->
+        <img src="img/mobile-nav2.JPG" alt="website" class="project-intro-img">
+    </section>
+    <div class="portfolio-body">
+        <h3 class="project-categories">Project overview</h3>
+        <p>
+            This project is an interactive personal website that 
+            I initially developed as part of the CS50: Introduction to Computer Science course to sharpen my skills in JavaScript, HTML, and CSS. 
+            Later, I restructured it to incorporate more JavaScript and enhance its interactivity and visual appeal. 
+            The website features a responsive design with parallax scrolling, a carousel displaying my favorite books, 
+            and two tab lists presenting my past trips and travel bucket list.
+        </p>
+        <h3 class="project-categories">Technologies used</h3>
+        <ul class="technologies-list">
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Responsive design</li>
+        </ul>
+        <h3 class="project-categories">Key features</h3>
+        <p> 
+            I created a visually appealing parallax scrolling effect using simple CSS code, enhancing the user experience as they navigate through the site.
+            <img src="img/my-website.jpg" alt="parallax scrolling" class="project-presentation-img"> 
+            <img src="img/parallax-scrolling.jpg" alt="parallax scrolling" class="project-presentation-img"> 
+            The carousel showcases my favorite books, complete with their covers and descriptions. 
+            Users can hover over each book to reveal its description and navigate through the carousel using left and right arrow buttons implemented with JavaScript.
+            <img src="img/carousel.jpg" alt="tenzies dice held" class="project-presentation-img">
+            The website features two tab lists, which I developed following the course on Scrimba with Kevin Powell.
+            <img src="img/tabs.jpg" alt="past trips" class="project-presentation-img">
+            Later, I adjusted the code to work for more than one tab list. The first tab list presents my past trips, including the countries I have visited and the places I have been within those countries. 
+            The second tab list displays my travel bucket list, which contains countries I wish to visit and specific locations within those countries.
+            <img src="img/tabs2.jpg" alt="travel bucket list" class="project-presentation-img">
+            The responsive navigation menu appears horizontally on larger screens and transforms into a hamburger icon on smaller ones. 
+            <img src="img/mobile-nav2.JPG" alt="navigation" class="project-presentation-small-img">
+            When clicked, the icon expands into a vertical menu and switches to an 'X', signaling the option to close.
+            <img src="img/mobile-nav.JPG" alt="navigation" class="project-presentation-small-img">
+           
+        </p>
+        <h3 class="project-categories">Challenges and solutions</h3>
+        <p>
+            In this project, I developed a responsive web page using JavaScript and CSS, 
+            featuring <span class="challenges">a navigation menu</span>, <span class="challenges">a book carousel with description overlays</span>, 
+            and <span class="challenges">tabbed sections</span> for past trips and bucket lists. 
+            The navigation menu includes a hamburger icon for small screens, the carousel enables navigation using arrows, 
+            and the tabbed sections offer keyboard navigation support.
+            <ol class="project-challenges-list">
+                <li>
+                    To build the responsive navigation menu, JavaScript event listeners, CSS media queries, and CSS transitions were employed. 
+                    The menu appears horizontally on larger screens and transforms into a hamburger icon on smaller ones. 
+                    When clicked, the icon expands into a vertical menu and switches to an 'X', signaling the option to close.
+                </li>
+                <li>
+                    I created the book carousel by showcasing a collection of horizontally arranged book items, navigable via left and right arrows. 
+                    When hovering over a carousel item, a description overlay is displayed. 
+                    I ensured responsiveness by adapting the carousel's width and the number of visible items based on screen size.
+                </li>
+                <li>
+                    The past trips and bucket list areas utilize a tabbed interface for content display. 
+                    Clicking a tab reveals corresponding content and images, while concealing others. 
+                    Arrow key-based keyboard navigation is supported by the tabs.
+                </li>
+            </ol>
+        </p>
+        <h3 class="project-categories">Learning outcomes</h3>
+        <p>
+            Through this project, I have gained valuable experience and sharpened various skills:
+            <ul class="project-skills-list">
+                <li><span class="project-skills">Responsive navigation bar creation:</span> Creating a responsive navigation bar that includes a menu button, with JavaScript event listeners, to toggle visibility of navigation items and dynamically change the icon based on the current state.</li>
+                <li><span class="project-skills">Carousel implementation:</span> Building an interactive carousel with left and right arrow controls using JavaScript, allowing users to navigate through carousel items seamlessly.</li>
+                <li><span class="project-skills">Accessible tabs system:</span> Creating an accessible tabs system with focus management, enabling users to navigate through tabs using arrow keys and displaying corresponding content and images upon tab selection with JavaScript event handling.</li>
+                <li><span class="project-skills">CSS variable usage:</span> Employing CSS variables to define color schemes and other shared values, facilitating effortless customization.</li>
+                <li><span class="project-skills">Responsive design implementation:</span> Constructing a responsive layout that adapts to various screen sizes using media queries, ensuring compatibility across devices.</li>
+                <li><span class="project-skills">Advanced CSS styling techniques:</span> Applying a range of CSS styles, such as transforms, transitions, and grid layouts, to produce an aesthetically appealing and functional user interface.</li>
+            </ul>
+        </p>
+        <h5 class="project-categories project-source-code">Project source code:
+            <span class="github-source">
+                <a href="https://github.com/paulina-kottlewska/personal-website" target="_blank">Github</a>
+            </span>
+        </h5>
+    </div>
+    
+    <footer>
+        <a href="mailto:paulina@kottlewska.dev" class="footer-link">paulina.kottlewska@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://www.linkedin.com/in/paulina-kottlewska-557933215" target="_blank">
+                    <i class="fab fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://github.com/paulina-kottlewska" target="_blank">
+                    <i class="fab fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/257fb5feca.js" crossorigin="anonymous"></script>
+
+    <title>Hogwarts School Demo Website</title>
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="index.html#projects" class="nav-link">My Projects</a></li>
+                <li class="nav-item"><a href="index.html#education" class="nav-link">Education and Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <div id="intro-name" class="initial-slide-left">
+            <h1 class="section-title section-title-intro">
+                <strong>Hogwarts School</strong><span class="project-intro">Demo Website</span>
+            </h1>
+        </div>
+        <!--https://unsplash.com/photos/-fFRcwJ9JYg?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink Photo by Mingdi Li on Unsplash-->
+        <img src="img/hogwarts-castle.jpg" alt="hogwarts castle" id="intro-image" class="intro-img initial-slide-right">
+    </section>
+    <div class="portfolio-body">
+        <h3 class="project-categories">Project overview</h3>
+        <p>
+            My project is a website dedicated to Hogwarts School, the fictional institution from the Harry Potter series. 
+            I created it as my final project for the CS50: Introduction to Computer Science course. 
+            My objective was to design a digital representation of the renowned school, 
+            with a primary focus on digitalizing the enrollment process for first-year students.
+        </p>
+        <h3 class="project-categories">Technologies used</h3>
+        <ul class="technologies-list">
+            <li>Python</li>
+            <li>Flask</li>
+            <li>Jinja</li>
+            <li>SQLite3</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>AJAX and JSON to communicate between JavaScript and Python</li>
+        </ul>
+        <h3 class="project-categories">Key features</h3>
+        <p> 
+            I designed a modal inspired by the Hogwarts Acceptance Letter, which is displayed immediately after the user completes the registration form. 
+            <img src="img/registration-page.jpg" alt="registration page" class="project-presentation-img">
+            <img src="img/hogwarts-letter.JPG" alt="hogwarts letter" class="project-presentation-img">
+            The user's name is extracted from the form and displayed in the greeting section of the letter. 
+            Upon clicking the continue button, users are directed to a dynamic Sorting Hat Quiz to determine their Hogwarts house. 
+            <img src="img/sorting-hat-quiz.jpg" alt="quiz" class="project-presentation-img">
+            In the event of a tie in points between houses, users have the opportunity to choose the house they would like to join. 
+            After completing the quiz, a modal with the crest, house name, and house colors is displayed. 
+            <img src="img/house-result.jpg" alt="quiz result" class="project-presentation-img">
+            Next, users gain access to the student panel, where they can explore and enroll in various subjects for the academic year. 
+            <img src="img/student-panel.jpg" alt="student panel" class="project-presentation-img">
+            <img src="img/enrolment-page.jpg" alt="enrolment" class="project-presentation-img">
+            Once enrolled, they can review the curriculum for each subject, which is sourced from an integrated database.
+            <img src="img/my-subjects-page.jpg" alt="subjects" class="project-presentation-img">
+            Additionally, there's a modal designed to resemble the List of Required Books and Equipment from the books, 
+            providing users with a familiar and engaging experience.
+            <img src="img/book-list.JPG" alt="list of books" class="project-presentation-img">
+        </p>
+        <h3 class="project-categories">Challenges and solutions</h3>
+        <p>
+            During the development process, I faced two main challenges: <span class="challenges">designing a dynamic quiz</span> and <span class="challenges">managing user enrollment</span>.
+            <ol class="project-challenges-list">
+                <li>
+                    For the quiz, I needed to track user answers and assign points to Hogwarts houses. 
+                    I resolved this by creating a custom object to maintain house points, using a JSON file to store quiz content, 
+                    and incorporating DOM manipulation and event listeners to update the quiz dynamically. 
+                    This solution provided a seamless and engaging experience for users.
+                </li>
+                <li>
+                    Another challenge was displaying enrolled subjects and updating enrollment buttons based on user status. 
+                    I used the Fetch API to facilitate communication between the front-end and back-end, allowing data exchange as JSON objects. 
+                    I then dynamically updated enrollment buttons using JavaScript and event listeners, providing real-time feedback to users without requiring a page refresh. 
+                    This approach ensured a smooth user experience.
+                </li>
+            </ol>
+        </p>
+        <h3 class="project-categories">Learning outcomes</h3>
+        <p>
+            Through this project, I have gained valuable experience and honed various skills:
+            <ul class="project-skills-list">
+                <li><span class="project-skills">Problem-solving:</span> Identifying challenges in web development projects and implementing effective solutions.</li>
+                <li><span class="project-skills">DOM manipulation and event handling:</span> Utilizing DOM elements and event listeners to create dynamic and interactive web content.</li>
+                <li><span class="project-skills">JSON data handling:</span> Gaining experience in creating, parsing, and handling JSON data for dynamic content and communication between the front-end and back-end.</li>
+                <li><span class="project-skills">AJAX and Fetch API:</span> Employing AJAX and the Fetch API to facilitate seamless communication between the front-end and back-end.</li>
+                <li><span class="project-skills">Database integration and updating:</span> Integrating and updating databases according to user interactions, demonstrating a foundational understanding of back-end concepts.</li>
+                <li><span class="project-skills">Responsive design:</span> Creating user interfaces that adapt to various screen sizes and devices, ensuring an optimal user experience</li>
+            </ul>
+        </p>
+        <h5 class="project-categories project-source-code">Project source code:
+            <span class="source">
+                <a href="https://github.com/paulina-kottlewska/hogwarts-school-demo-website" target="_blank">Github</a>
+            </span>
+        </h5>
+    </div>
+    
+    <footer>
+        <a href="mailto:paulina@kottlewska.dev" class="footer-link">paulina.kottlewska@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://www.linkedin.com/in/paulina-kottlewska-557933215" target="_blank">
+                    <i class="fab fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://github.com/paulina-kottlewska" target="_blank">
+                    <i class="fab fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

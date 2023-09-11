@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/257fb5feca.js" crossorigin="anonymous"></script>
+
+    <title>Age Calculator App</title>
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="index.html#projects" class="nav-link">My Projects</a></li>
+                <li class="nav-item"><a href="index.html#education" class="nav-link">Education and Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <div id="intro-name" class="initial-slide-left">
+            <h1 class="section-title section-title-intro project-title-intro">
+                <strong>Age</strong><strong>Calculator</strong><span class="project-intro">Application</span>
+            </h1>
+        </div>
+        <img src="img/age-calculator-app-logo.JPG" alt="screenshot of age calculator app" id="intro-image" class="project-intro-img initial-slide-right">
+    </section>
+    <div class="portfolio-body">
+        <h3 class="project-categories">Project overview</h3>
+        <p>
+            The project is a simple web application developed as a part of the Frontend Mentor Challenges, where the design is provided. 
+            It asks the user to input their date of birth in the day, month, and year format. The user interface includes a form with three separate input fields and a submit button. 
+            After submission, the application calculates the user's age in years, months, and days and presents the results underneath the form. 
+            Additionally, the application displays error messages if any of the input fields are blank or if the entered date is invalid.
+        </p>
+        <h3 class="project-categories">Technologies used</h3>
+        <ul class="technologies-list">
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Responsive design</li>
+            <li>Mobile-first workflow</li>
+        </ul>
+        <h3 class="project-categories">Key features</h3>
+        <p> 
+            Users are prompted to input their date of birth using three separate fields for the day, month, and year. 
+            <img src="img/age-calculator-app-mobile.JPG" alt="age calculator app mobile view" class="project-presentation-img small-img">
+            If any field is left blank or contains an invalid value, an error message is displayed, and the age calculation is not performed. 
+            <img src="img/age-calculator-app-empty-inputs.JPG" alt="age calculator app empty fields error" class="project-presentation-img">
+            <img src="img/age-calculator-app-invalid-inputs.JPG" alt="age calculator app invalid inputs error" class="project-presentation-img">
+            <img src="img/age-calculator-app-error-whole-form.JPG" alt="age calculator app error message and style for whole form" class="project-presentation-img">
+            Upon entering valid values and clicking the 'Submit' button, the application calculates the user's age in years, months, and days and displays the results underneath the form.
+            <img src="img/age-calculator-app-desktop.JPG" alt="age calculator app valid inputs and age calculation" class="project-presentation-img">
+            The application restricts non-digit characters from being entered and dynamically displays and removes error messages based on user input. 
+            Additionally, the application employs responsive design principles, ensuring an optimal user experience across various screen sizes and devices.  
+        </p>
+        <h3 class="project-categories">Challenges and solutions</h3>
+        <p>
+            During the development process, I encountered several challenges, including 
+            <span class="challenges">validating the user input</span>, <span class="challenges">restricting non-digit characters in the input fields</span>, 
+            <span class="challenges">dynamically handling error messages</span>, <span class="challenges">accurately calculating the user's age</span>, 
+            and <span class="challenges">animating numbers</span>. 
+
+            <ol class="project-challenges-list">
+                <li>
+                    To ensure the input for day, month, and year is valid, I implemented various validation functions in JavaScript. 
+                    These functions check if the input fields are empty or if the entered date is valid, and display appropriate error messages if necessary. 
+                    This approach ensures the age calculation is not performed unless the input is valid.
+                </li>
+                <li>
+                    To ensure only valid numerical inputs were entered by the user, I utilized JavaScript to listen for keydown events and prevent the entry of non-digit characters. 
+                    This approach ensures that only valid numerical inputs are accepted.
+                </li>
+                <li>
+                    I designed the application to dynamically display and remove error messages based on user input. 
+                    It was essential to clear the error messages and associated input and label styles when the user started typing in an input field or when the submit button was clicked. 
+                    This enhancement to the user experience was managed using JavaScript.
+                </li>
+                <li>
+                    Once the input validation was successfully passed, the application calculates the user's age in years, months, and days from the entered birthdate to the current date. 
+                    The results are then displayed in appropriate spans, ensuring accurate age calculation and presentation.
+                </li>
+                <li>
+                    To make the application more engaging, I implemented a function in JavaScript to manage the animation of the numbers from 0 to their final value when displaying the calculated age. 
+                    This contributed to a more engaging user experience.
+                </li>
+            </ol>
+        </p>
+        <h3 class="project-categories">Learning outcomes</h3>
+        <p>
+            Through this project, I have deepened my understanding and sharpened various existing skills:
+            <ul class="project-skills-list">
+                <li><span class="project-skills">JavaScript Input Validation and Calculation:</span> Enhanced my skills in using JavaScript for input validation and performing calculations.</li>
+                <li><span class="project-skills">Modular JavaScript:</span> Developed a more advanced approach to building modular JavaScript scripts, creating functions with distinct purposes, making the script easier to maintain.</li>
+                <li><span class="project-skills">Error Handling:</span> Gained more in-depth experience in handling and displaying error messages in a web application.</li>
+                <li><span class="project-skills">Responsive Design and Mobile-First Workflow:</span> Refined my skills in creating web applications that are responsive across different screen sizes using media queries in CSS, with a focus on a mobile-first workflow.</li>
+                <li><span class="project-skills">CSS Custom Properties:</span> Gained a deeper understanding of CSS custom properties, enabling me to create more maintainable and scalable style sheets.</li>
+                <li><span class="project-skills">Interactive Elements:</span> Improved my ability to create interactive elements on a web page using a combination of HTML, CSS, and JavaScript.</li>
+            </ul>
+        </p>
+        <h5 class="project-categories project-source-code">Project source code and website URL:</h5>
+        <ul class="sources-list">
+            <li>
+                <span class="source">
+                    <a href="https://github.com/paulina-kottlewska/age-calculator-app" target="_blank">Github</a>
+                </span>
+            </li>
+            <li> 
+                <span class="source">
+                    <a href="https://age-calculator-app-pk.netlify.app/" target="_blank">Live Site</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+    
+    <footer>
+        <a href="mailto:paulina@kottlewska.dev" class="footer-link">paulina.kottlewska@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://www.linkedin.com/in/paulina-kottlewska-557933215" target="_blank">
+                    <i class="fab fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://github.com/paulina-kottlewska" target="_blank">
+                    <i class="fab fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

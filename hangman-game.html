@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/257fb5feca.js" crossorigin="anonymous"></script>
+
+    <title>The Hangman Game</title>
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="index.html#projects" class="nav-link">My Projects</a></li>
+                <li class="nav-item"><a href="index.html#education" class="nav-link">Education and Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <div id="intro-name" class="initial-slide-left">
+            <h1 class="section-title section-title-intro project-title-intro">
+                <strong>Hangman</strong><span class="project-intro">Game</span>
+            </h1>
+        </div>
+        <img src="img/hangman-logo1.jpg" alt="screenshot of hangman game" id="intro-image" class="project-intro-img initial-slide-right">
+    </section>
+    <div class="portfolio-body">
+        <h3 class="project-categories">Project overview</h3>
+        <p>
+            The Hangman game is a web-based application I developed as part of a challenge in "The Modern React Bootcamp" by Colt Steele on Udemy. 
+            The challenge provided only the functionality specifications and an image of the hangman, leaving the implementation details up to the developer. 
+            Guided by the course but opting for a modern approach, I chose to utilize React hooks and functional components instead of the traditional class components.<br>
+            The game starts with a start button that generates a random word for players to guess. Players use alphabet buttons to guess the word. 
+            When a letter is selected, the game either uncovers the correctly guessed letters within the word or updates the Hangman image to reflect the wrong guess. 
+            Six wrong guesses result in revealing the hangman and the word in red, accompanied by a loss message. Correctly guessing the word highlights it in green and displays a win message. 
+            After completion, players can reset and play again with a simple click.         
+        </p>
+        <h3 class="project-categories">Technologies used</h3>
+        <ul class="technologies-list">
+            <li>React.js</li>
+            <li>React Hooks</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Responsive design</li>
+            <li>Mobile-first workflow</li>
+        </ul>
+        <h3 class="project-categories">Key features</h3>
+        <p> 
+            When the player clicks the start button, a word is randomly chosen for them to guess.
+            <img src="img/hangman-game-mobile.JPG" alt="start page mobile view" class="project-presentation-img small-img">
+            <img src="img/hangman-game-desktop-start-page.JPG" alt="start page desktop view" class="project-presentation-img">
+            Players guess the word using dedicated alphabet buttons. 
+            <img src="img/hangman-game-desktop.JPG" alt="game page with alphabet buttons and underscores to guess the word" class="project-presentation-img">
+            Once a button is selected, it becomes disabled and is crossed out in red.<br> 
+            Letters guessed correctly are immediately revealed in their respective positions.<br>
+            Wrong guesses incrementally reveal parts of the hangman drawing.
+            <img src="img/hangman-game-desktop-guess.JPG" alt="selected buttons crossed out in red, if incorrect - part of the hangman drawing revealed, if correct - letters instead of underscores" class="project-presentation-img">
+            After six incorrect guesses, the hangman is fully revealed, and the hidden word is shown in red, accompanied by a matching loss message.
+            <img src="img/hangman-game-desktop-incorrect-guess.JPG" alt="fully revealed hangman, word shown in red with a matching message" class="project-presentation-img">
+            A successfully guessed word is highlighted in green, followed by a win message.<br>
+            Players can start a new game by clicking the "Play again" button, which generates a new word and resets the game.
+            <img src="img/hangman-game-desktop-correct-guess.JPG" alt="word shown in green with a matching message" class="project-presentation-img">
+        </p>
+        <h3 class="project-categories">Challenges and solutions</h3>
+        <p>
+            During the development process, I encountered several challenges. These included 
+            <span class="challenges">the dynamic generation of a word for each game</span>, <span class="challenges">the management of the game's multiple states</span>, 
+            <span class="challenges">ensuring proper interaction of the alphabet buttons</span>, <span class="challenges">presenting the word dynamically with real-time feedback</span>, 
+            and <span class="challenges">preserving a consistent style and responsiveness across components</span>. 
+
+            <ol class="project-challenges-list">
+                <li>
+                    To present a new challenge with every game iteration, I employed the 'getRandomWord' function from helperFunctions. 
+                    This function extracts a random word from the words.json file. Using the 'setRandomWord' function, it is then set as the main word for the game.
+                </li>
+                <li>
+                    To handle states like 'startGame', 'gameOver', and 'incorrectlyGuessed', I used React's useState. 
+                    Additionally, the useEffect hook helped monitor and respond to gameplay changes.
+                </li>
+                <li>
+                    To make sure that once a letter was selected, it couldn't be chosen again and to show clear feedback for selected letters, the 'AlphabetButtons' component checked the 'guessedLetters' list to see if a letter was already selected. 
+                    The 'getButtonClass' function changed the button's appearance, and the disabled feature made sure selected letters couldn't be clicked again.
+                </li>
+                <li>
+                    A main game feature was revealing the secret word bit by bit as players made guesses. 
+                    Using the 'WordDisplay' component, each letter was either shown (if guessed right) or hidden with a placeholder. 
+                    How the word finally appeared depended on the 'revealWord' and 'isCorrect' settings, and 'getLetterClass' helped style it based on the game's result.
+                </li>
+                <li>
+                    I used modular CSS to organize the styles, putting them into specific files like 'Hangman.css' and 'App.css'. 
+                    By using specific class names for each part, I made sure everything looked right and left room for future improvements.
+                </li>
+            </ol>
+        </p>
+        <h3 class="project-categories">Learning outcomes</h3>
+        <p>
+            Through this project, I have deepened my understanding and sharpened various existing skills:
+            <ul class="project-skills-list">
+                <li><span class="project-skills">State Management with React:</span> Gained a deeper understanding of the useState hook in React, enabling me to better manage multiple states within components, reflecting game aspects like 'startGame', 'gameOver'.</li>
+                <li><span class="project-skills">React Lifecycle with useEffect:</span> Enhanced my skills in the useEffect hook, focusing on handling component side effects, especially in response to changes such as those in 'guessedLetters'.</li>
+                <li><span class="project-skills">Data Flow with React Props:</span> Gained a deeper understanding of how data moves between React components with props.</li>
+                <li><span class="project-skills">Event Handling in React:</span> Improved my capability to handle user interactions in React, particularly in managing game functions like initiating with 'handleStartGame' and processing user inputs with 'handleGuessedLetter'.</li>
+                <li><span class="project-skills">Modular JavaScript and Reusability:</span> Enhanced the ability to divide JavaScript logic by importing and utilizing helper functions, such as 'getRandomWord' and 'isTheSame', ensuring code clarity and reusability.</li>
+                <li><span class="project-skills">Integration of JSON Data:</span> Gained more in-depth experience in integrating JSON data, seamlessly incorporating it within React components.</li>
+                <li><span class="project-skills">Dynamic CSS Assignments:</span> Enhanced my ability to dynamically assign CSS classes, focusing on real-time updates based on game conditions, ensuring a more engaging user interface.</li>
+            </ul>
+        </p>
+        <h5 class="project-categories project-source-code">Project source code and website URL:</h5>
+        <ul class="sources-list">
+            <li>
+                <span class="source">
+                    <a href="https://github.com/paulina-kottlewska/hangman-game" target="_blank">Github</a>
+                </span>
+            </li>
+            <li> 
+                <span class="source">
+                    <a href="https://hangman-game-pk.netlify.app/" target="_blank">Live Site</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+    
+    <footer>
+        <a href="mailto:paulina@kottlewska.dev" class="footer-link">paulina.kottlewska@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://www.linkedin.com/in/paulina-kottlewska-557933215" target="_blank">
+                    <i class="fab fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://github.com/paulina-kottlewska" target="_blank">
+                    <i class="fab fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

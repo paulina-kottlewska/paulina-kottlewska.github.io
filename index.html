@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/257fb5feca.js" crossorigin="anonymous"></script>
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">My Projects</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education and Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <div id="intro-name" class="initial-slide-left">
+            <h1 class="section-title section-title-intro">
+                Hi, I'm <strong>Paulina Kottlewska</strong>
+            </h1>
+            <p class="section-subtitle section-subtitle-intro">Front-End <span class="web-dev">Web Developer</span></p>
+        </div>
+        <!-- Photo by Valdemaras D.: https://www.pexels.com/photo/beautiful-aurora-borealis-in-the-sky-11042734/ -->
+        <img src="img/pexels-valdemarasd.jpg" alt="photo of northern lights" id="intro-image" class="intro-img initial-slide-right">
+    </section>
+    <section class="about-me" id="about">
+        <div class="about-container">
+            <h2 class="section-title section-title-about">About Me</h2>
+            <p class="section-subtitle section-subtitle-about"> An aspiring front-end web developer 
+            </p>
+            <div class="about-me-body">
+                <p>
+                    I'm an aspiring front-end web developer with a strong passion for creating interactive and visually appealing websites. 
+                    Although I haven't gained professional experience yet, I have completed several web development courses, such as 
+                    CS50: Introduction to Computer Science, as well as the Learn React and Advanced React courses on the Scrimba platform. 
+                    These courses have equipped me with a solid foundation in HTML, CSS, JavaScript, and React, 
+                    allowing me to create a range of projects that showcase my skills.
+                </p>
+                <p>
+                    As demonstrated through my projects, I am proficient in developing responsive and user-friendly designs, 
+                    creating custom reusable components, and utilizing third-party libraries to enhance both application functionality 
+                    and user experience. I am also skilled in handling data fetching and integration, DOM manipulation and event handling, 
+                    as well as implementing advanced CSS styling techniques.
+                </p>
+                <p>
+                    I am highly motivated, a fast learner, and committed to continuous improvement. 
+                    I am eager to apply my skills to real-world projects and contribute to a team of like-minded professionals.
+                    My portfolio highlights some of my recent projects, including a Hogwarts School demo website, a tenzies dice game, 
+                    a quiz application, and my personal website. I invite you to explore these projects to get a sense of my capabilities 
+                    and the quality of my work.
+                </p>
+                <p>
+                    As I embark on my journey to become a professional front-end web developer, 
+                    my goal is to continuously learn and enhance my skills, and to make meaningful contributions to innovative projects. 
+                    I'm excited to learn from experienced professionals and become an active member of the web development community.
+                </p>
+            </div>
+        </div>    
+    </section>
+    <section class="my-projects" id="projects">
+        <h2 class="section-title section-title-projects">My Projects</h2>
+        <p class="section-subtitle"></p>
+        <div class="portfolio">
+            <div class="card">
+                <div class="card-header">
+                    <img src="img/hogwarts-website.jpg" alt="screenshot of hogwarts website" class="project-img">
+                </div>
+                <div class="card-body">
+                    <h2 class="project-title">Hogwarts School</h2>
+                    <p class="project-description">
+                        This project is a demo website dedicated to Hogwarts School, the fictional institution from the Harry Potter series. 
+                        I created it as my final project for the CS50: Introduction to Computer Science course. 
+                        My objective was to design a digital representation of the renowned school, 
+                        with a primary focus on digitalizing the enrollment process for first-year students.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="technologies-list-card">Technologies used:</p>
+                    <div class="technologies-icons-container tech-hogwarts-icons">
+                        <!--https://www.pngegg.com-->
+                        <img src="img/javascript.png" alt="JavaScript icon" class="technologies-icons js">
+                        <img src="img/python.png" alt="Python icon" class="technologies-icons python">
+                        <img src="img/flask.png" alt="Flask icon" class="technologies-icons flask">
+                        <img src="img/sqlite.png" alt="SQLite icon" class="technologies-icons sqlite">
+                        <img src="img/bootstrap.png" alt="Bootstrap icon" class="technologies-icons bootstrap">
+                    </div>
+                    <a href="hogwarts.html" class="btn btn-project">View Project</a>
+                    <a href="https://github.com/paulina-kottlewska/hogwarts-school-demo-website.git" target="_blank" class="btn btn-project">Source Code</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="img/hangman-main.JPG" alt="screenshot of hangman game" class="project-img">
+                </div>
+                <div class="card-body">
+                    <h2 class="project-title">The Hangman Game</h2>
+                    <p class="project-description">
+                        This project showcases a classic hangman game application, where players guess letters to figure out a hidden word. 
+                        Players select from an array of alphabetic buttons, and with each incorrect guess, a part of a hangman figure is drawn. 
+                        The game ends either when the word is fully guessed, or the hangman figure is completely drawn. 
+                        I undertook this project as part of a challenge from the Udemy course 'The Modern React Bootcamp'. 
+                        I was given certain specifications and requirements to adhere to. 
+                        Not only did the course challenge me to meet the functional aspects, but it also provided an opportunity to take the lead on the visual and design elements. 
+                        This pushed me to innovate and implement them in the best way possible.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="technologies-list-card">Technologies used:</p>
+                    <div class="technologies-icons-container">
+                        <!--https://www.pngegg.com-->
+                        <img src="img/react.png" alt="React icon" class="technologies-icons react">
+                        <img src="img/javascript.png" alt="JavaScript icon" class="technologies-icons js">
+                        <img src="img/html.png" alt="HTML icon" class="technologies-icons html">
+                        <img src="img/css.png" alt="CSS icon" class="technologies-icons css">
+                    </div>
+                    <a href="hangman-game.html" class="btn btn-project">View Project</a>
+                    <a href="https://github.com/paulina-kottlewska/hangman-game" target="_blank" class="btn btn-project">Source Code</a>
+                    <a href="https://hangman-game-pk.netlify.app/" target="_blank" class="btn btn-project">Live Site</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="img/age-calculator-app-desktop.JPG" alt="screenshot of age calculator app" class="project-img">
+                </div>
+                <div class="card-body">
+                    <h2 class="project-title">Age Calculator App</h2>
+                    <p class="project-description">
+                        This project features an age calculator application that computes a user's age in years, months, and days based on their entered birthdate and the current date. 
+                        Users input their birthdate, and after passing the input validation, the application calculates and displays their age with animated numbers. 
+                        The application also restricts non-digit characters from being entered and dynamically handles error messages based on the user input. 
+                        I developed this project as a challenge from Frontend Mentor, where only a design template and an explanation of the desired functionality were provided, which I then implemented.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="technologies-list-card">Technologies used:</p>
+                    <div class="technologies-icons-container">
+                        <!--https://www.pngegg.com-->
+                        <img src="img/javascript.png" alt="JavaScript icon" class="technologies-icons js">
+                        <img src="img/html.png" alt="HTML icon" class="technologies-icons html">
+                        <img src="img/css.png" alt="CSS icon" class="technologies-icons css">
+                    </div>
+                    <a href="age-calculator-app.html" class="btn btn-project">View Project</a>
+                    <a href="https://github.com/paulina-kottlewska/age-calculator-app" target="_blank" class="btn btn-project">Source Code</a>
+                    <a href="https://age-calculator-app-pk.netlify.app/" target="_blank" class="btn btn-project">Live Site</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="img/quiz-start.JPG" alt="screenshot of quiz start page" class="project-img">
+                </div>
+                <div class="card-body">
+                    <h2 class="project-title">Quizzical</h2>
+                    <p class="project-description">
+                        This project features a quiz that generates questions and answers using the Fetch API. 
+                        Users are presented with five questions, with a choice of multiple-choice or true/false answers. 
+                        After selecting all the answers, users can verify their correctness by clicking the "Check answers" button. 
+                        If they choose to play again, the quiz will load a new set of questions. 
+                        I developed this project during the Learn React course on the Scrimba platform. 
+                        For this assignment, only a Figma design template was provided, 
+                        along with the teacher's explanation of the desired website functionality, which I then implemented.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="technologies-list-card">Technologies used:</p>
+                    <div class="technologies-icons-container">
+                        <!--https://www.pngegg.com-->
+                        <img src="img/react.png" alt="React icon" class="technologies-icons react">
+                        <img src="img/javascript.png" alt="JavaScript icon" class="technologies-icons js">
+                        <img src="img/html.png" alt="HTML icon" class="technologies-icons html">
+                        <img src="img/css.png" alt="CSS icon" class="technologies-icons css">
+                    </div>
+                    <a href="quizzical.html" class="btn btn-project">View Project</a>
+                    <a href="https://github.com/paulina-kottlewska/quiz.git" target="_blank" class="btn btn-project">Source Code</a>
+                    <a href="https://quizzical-pk.netlify.app/" target="_blank" class="btn btn-project">Live Site</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="img/tenzies-lowest-current.jpg" alt="screenshot of tenzies final result page" class="project-img">
+                </div>
+                <div class="card-body">
+                    <h2 class="project-title">Tenzies</h2>
+                    <p class="project-description">
+                        This project is a digital version of a dice game. 
+                        The objective is to keep rolling ten dice until all of them display the same number. 
+                        I developed it as part of a series of challenges during the Learn React course on the Scrimba platform. 
+                        After completing the project on the platform, I added three additional features to the game. 
+                        First, I replaced the numbers on the dice with dots. Second, I introduced the ability to track the number of rolls. 
+                        Finally, I implemented a feature that saves the lowest roll count to local storage.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="technologies-list-card">Technologies used:</p>
+                    <div class="technologies-icons-container">
+                        <!--https://www.pngegg.com-->
+                        <img src="img/react.png" alt="React icon" class="technologies-icons react">
+                        <img src="img/javascript.png" alt="JavaScript icon" class="technologies-icons js">
+                        <img src="img/html.png" alt="HTML icon" class="technologies-icons html">
+                        <img src="img/css.png" alt="CSS icon" class="technologies-icons css">
+                    </div>
+                    <a href="tenzies.html" class="btn btn-project">View Project</a>
+                    <a href="https://github.com/paulina-kottlewska/tenzies.git" target="_blank" class="btn btn-project">Source Code</a>
+                    <a href="https://tenzies-dice-game-pk.netlify.app/" target="_blank" class="btn btn-project">Live Site</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="education-skills" id="education">
+        <div class="edu-skills-container">
+            <div class="education">
+                <h3 class="edu-title">Education</h3>
+                <div class="edu-body">
+                    <ul class="edu-list">
+                        <li>2023: Advanced React by Bob Ziroll (Scrimba)</li>
+                        <a href="https://scrimba.com/certificate/uDBnQesz/greact" target="_blank" class="btn">Certificate</a>
+                        <li>2023: Learn React by Bob Ziroll (Scrimba)</li>
+                        <li>2022: CS50's Introduction to Computer Science (edX)</li>
+                        <a href="https://courses.edx.org/certificates/b5fd565dcb264f7b841b915db93e7235" target="_blank" class="btn">Certificate</a>
+                        <li>2022: The Modern React Bootcamp by Colt Steele (Udemy)</li>
+                        <a href="https://www.udemy.com/certificate/UC-5f582cd8-ce02-46f6-843a-389d8bbed2c8/" target="_blank" class="btn">Certificate</a>
+                        <li>2021: The Modern JavaScript Bootcamp Course by Colt Steele (Udemy)</li>
+                        <a href="https://www.udemy.com/certificate/UC-517daf28-d089-4e48-864f-99d421c5e537/" target="_blank" class="btn">Certificate</a>
+                        <li>2021: JavaScript Algorithms and Data Structures (freeCodeCamp)</li>
+                        <a href="https://www.freecodecamp.org/certification/pkottlewska/javascript-algorithms-and-data-structures" target="_blank" class="btn">Certificate</a>
+                        <li>2021: MTA: Introduction to Programming using HTML and CSS (98-383, eColllege)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills">
+                <h3 class="skills-title">Skills</h3>
+                <div class="skills-icons">
+                    <!--https://icon-icons.com/icon/file-type-html/130541-->
+                    <p class="skills-names"><img src="img/html.png" alt="HTML icon" class="icons">HTML</p>
+                    <!--https://icon-icons.com/icon/file-type-css/130661-->
+                    <p class="skills-names"><img src="img/css.png" alt="CSS icon" class="icons">CSS</p>
+                    <!--https://www.pngegg.com/en/png-elxdp JavaScript-->
+                    <p class="skills-names"><img src="img/javascript.png" alt="javascript icon" class="icons">JavaScript</p>
+                    <!--https://icon-icons.com/icon/react-original-logo/146374-->
+                    <p class="skills-names"><img src="img/react.png" alt="react icon" class="icons">React</p>
+                    <!--https://www.pngegg.com/en/png-vejvo Bootstrap-->
+                    <p class="skills-names"><img src="img/bootstrap.png" alt="bootstrap icon" class="icons">Bootstrap</p>
+                    <!--https://www.pngegg.com/en/png-veycg VS Code-->
+                    <p class="skills-names"><img src="img/vscode.png" alt="vscode icon" class="icons">VS Code</p>
+                </div>
+            </div>
+        </div>    
+    </section>
+    <footer>
+        <a href="mailto:paulina@kottlewska.dev" class="footer-link">paulina.kottlewska@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://www.linkedin.com/in/paulina-kottlewska-557933215" target="_blank">
+                    <i class="fab fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://github.com/paulina-kottlewska" target="_blank">
+                    <i class="fab fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/257fb5feca.js" crossorigin="anonymous"></script>
+
+    <title>Quizzical</title>
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="index.html#projects" class="nav-link">My Projects</a></li>
+                <li class="nav-item"><a href="index.html#education" class="nav-link">Education and Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <div id="intro-name" class="initial-slide-left">
+            <h1 class="section-title section-title-intro project-title-intro">
+                <strong>Quizzical</strong><span class="project-intro">Knowledge Test</span>
+            </h1>
+        </div>
+        <img src="img/quiz-profile.jpg" alt="screenshot of quizzical start page" id="intro-image" class="project-intro-img initial-slide-right">
+    </section>
+    <div class="portfolio-body">
+        <h3 class="project-categories">Project overview</h3>
+        <p>
+            This project features a quiz that generates questions and answers using the Fetch API. 
+            Users are presented with five questions, with a choice of multiple-choice or true/false answers. 
+            After selecting all the answers, users can verify their correctness by clicking the 'Check answers' button. 
+            If they choose to play again, the quiz will load a new set of questions. 
+            I developed this project during the Learn React course on the Scrimba platform. 
+            For this assignment, only a Figma design template was provided, 
+            along with the teacher's explanation of the desired website functionality, which I then implemented.
+        </p>
+        <h3 class="project-categories">Technologies used</h3>
+        <ul class="technologies-list">
+            <li>React</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Responsive design</li>
+        </ul>
+        <h3 class="project-categories">Key features</h3>
+        <p> 
+            Users are presented with five questions, each accompanied by corresponding answer options, 
+            which can be either multiple-choice or true/false. 
+            <img src="img/quiz-start.JPG" alt="quizzical start" class="project-presentation-img"> 
+            <img src="img/quizzical-questions.JPG" alt="quizzical questions" class="project-presentation-img"> 
+            Once users have selected answers for all the questions, the 'Check answers' button becomes enabled. 
+            <img src="img/quizzical-half-selected.JPG" alt="quizzical answers" class="project-presentation-img"> 
+            <img src="img/quizzical-all-selected.JPG" alt="quizzical answers" class="project-presentation-img"> 
+            Clicking this button highlights correct answers with a green background, while incorrect answers selected by the user turn red, 
+            and the remaining options shift to a lighter color. 
+            A summary of the user's correct answers is displayed at the bottom of the questions container, alongside a 'Play again' button. 
+            <img src="img/quizzical-check-answers.JPG" alt="quizzical check answers" class="project-presentation-img"> 
+            Clicking 'Play again' button fetches a new set of questions and answers. 
+            <img src="img/quizzical-new-questions.JPG" alt="quizzical new questions" class="project-presentation-img"> 
+            The website employs responsive design principles, ensuring an optimal user experience across various screen sizes and devices.
+        </p>
+        <h3 class="project-categories">Challenges and solutions</h3>
+        <p>
+            During the development process, I encountered several challenges, including <span class="challenges">managing the quiz state</span>, 
+            <span class="challenges">enabling the "Check answers" button</span>, <span class="challenges">creating a dynamic quiz</span>, and <span class="challenges">displaying fetched content accurately</span>.
+            <ol class="project-challenges-list">
+                <li>
+                    To manage the quiz state effectively, I utilized React's useState and useEffect hooks. 
+                    This allowed me to fetch questions and answers using the Fetch API and store them as objects in the 'questions' state. 
+                    To track the user's selected answers, I updated the 'usersAnswer' key in the corresponding question object. 
+                    This approach ensured the correct and incorrect answers were displayed upon checking.
+                </li>
+                <li>
+                    To enable the 'Check answers' button only when all questions had been answered, 
+                    I created an additional useEffect hook to monitor the "questions" state and update the 'disabledBtn' state accordingly. 
+                    Once the user selects an answer, the 'selected' key value in the corresponding question object is changed to true. 
+                    This state controlled the button's disabled attribute and contributed to a smooth user experience.
+                </li>
+                <li>
+                    For a dynamic quiz experience, I implemented the 'shuffleAnswers' function that randomized the order of answer options for each question. 
+                    This ensured a unique quiz experience for users each time they played.
+                </li>
+                <li>
+                    To display fetched questions and answers correctly on the user interface, 
+                    I used the 'html-entities' library to decode them, converting HTML entities to their respective characters.
+                </li>
+            </ol>
+        </p>
+        <h3 class="project-categories">Learning outcomes</h3>
+        <p>
+            Through this project, I have gained valuable experience and honed various skills:
+            <ul class="project-skills-list">
+                <li><span class="project-skills">Proficiency in React:</span> Utilizing core React features, including 'useState' and 'useEffect' hooks, to effectively manage application state and develop dynamic user interfaces.</li>
+                <li><span class="project-skills">Data fetching and integration:</span> Demonstrating the ability to fetch data from external APIs using the Fetch API and seamlessly integrating it into a React application.</li>
+                <li><span class="project-skills">Custom function implementation:</span> Successfully developing custom functions, such as the 'shuffleAnswers' function, to create unique and dynamic quiz experiences for users.</li>
+                <li><span class="project-skills">Third-party library utilization:</span> Skilled in employing third-party libraries like 'nanoid' for unique ID generation and 'html-entities' for decoding fetched content, enhancing both application functionality and user experience.</li>
+                <li><span class="project-skills">Custom reusable components:</span> Creating reusable components, like the 'Question' component, to maintain a modular and easily maintainable codebase.</li>
+                <li><span class="project-skills">Conditional rendering and inline styling:</span> Applying conditional rendering and inline styles in React to manage component appearance and offer real-time user feedback based on their interactions.</li>
+                <li><span class="project-skills">Event handling and callback functions:</span>  Demonstrating effective use of event listeners and callback functions to manage user interactions and update application state as needed.</li>
+            </ul>
+        </p>
+        <h5 class="project-categories project-source-code">Project source code and website URL:</h5>
+        <ul class="sources-list">
+            <li>
+                <span class="source">
+                    <a href="https://github.com/paulina-kottlewska/quiz" target="_blank">Github</a>
+                </span>
+            </li>
+            <li> 
+                <span class="source">
+                    <a href="https://quizzical-pk.netlify.app/" target="_blank">Live Site</a>
+                </span>
+            </li>
+        </ul>   
+    </div>
+    
+    <footer>
+        <a href="mailto:paulina@kottlewska.dev" class="footer-link">paulina.kottlewska@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://www.linkedin.com/in/paulina-kottlewska-557933215" target="_blank">
+                    <i class="fab fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://github.com/paulina-kottlewska" target="_blank">
+                    <i class="fab fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

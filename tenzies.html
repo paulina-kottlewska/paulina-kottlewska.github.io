@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/257fb5feca.js" crossorigin="anonymous"></script>
+
+    <title>Tenzies</title>
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="index.html#projects" class="nav-link">My Projects</a></li>
+                <li class="nav-item"><a href="index.html#education" class="nav-link">Education and Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <div id="intro-name" class="initial-slide-left">
+            <h1 class="section-title section-title-intro project-title-intro">
+                <strong>Tenzies</strong><span class="project-intro">Dice Game</span>
+            </h1>
+        </div>
+        <img src="img/tenzies-profile.jpg" alt="screenshot of tenzies page" id="intro-image" class="project-intro-img initial-slide-right">
+    </section>
+    <div class="portfolio-body">
+        <h3 class="project-categories">Project overview</h3>
+        <p>
+            This project is a digital version of a dice game. 
+            The objective is to keep rolling ten dice until all of them display the same number. 
+            I developed it as part of a series of challenges during the Learn React course on the Scrimba platform. 
+            After completing the project on the platform, I added three additional features to the game. 
+            First, I replaced the numbers on the dice with dots. Second, I introduced the ability to track the number of rolls. 
+            Finally, I implemented a feature that saves the lowest roll count to local storage.
+        </p>
+        <h3 class="project-categories">Technologies used</h3>
+        <ul class="technologies-list">
+            <li>React</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Responsive design</li>
+        </ul>
+        <h3 class="project-categories">Key features</h3>
+        <p> 
+            The user is presented with ten dice, and the objective is to roll them until all the dice display the same number.
+            <img src="img/tenzies-start.jpg" alt="tenzies start" class="project-presentation-img"> 
+            To achieve this, users can click on their chosen dice to hold them, preventing them from rolling during the next click of the roll button.
+            <img src="img/tenzies-dice-held.jpg" alt="tenzies dice held" class="project-presentation-img">
+            I implemented a feature that counts the rolls and, upon completion, 
+            displays the current roll count alongside the lowest roll count from the local storage. 
+            <img src="img/tenzies-final.jpg" alt="tenzies final" class="project-presentation-img">
+            If the current game's roll count is lower than the local storage's count, the local storage is updated. 
+            <img src="img/tenzies-lowest-num.jpg" alt="tenzies lowest num" class="project-presentation-img">
+            <img src="img/tenzies-lowest-current.jpg" alt="tenzies lowest and current num" class="project-presentation-img">
+            When the user starts a new game, the updated lowest roll count is displayed at the bottom of the game. 
+            <img src="img/tenzies-new-lowest.jpg" alt="tenzies new lowest num" class="project-presentation-img">
+            In the original version presented in the course, the dice displayed numbers. 
+            I modified them to show dots using a grid layout. 
+            The website is designed with responsive principles, ensuring an optimal user experience on various screen sizes and devices.
+        </p>
+        <h3 class="project-categories">Challenges and solutions</h3>
+        <p>
+            During the development process, I encountered several challenges, such as <span class="challenges">displaying the correct die face using dots instead of numbers</span>, 
+            and <span class="challenges">saving and displaying the lowest number of rolls and the current number of rolls</span>.
+            <ol class="project-challenges-list">
+                <li>
+                    To display die face correctly, I created a 'faces' array that stores the dot representation for each die value as JSX elements, 
+                    utilizing a grid layout to accurately position the dots. 
+                    In the 'Die' component, I implemented the 'getDieFace()' function, 
+                    which iterates through the 'faces' array and returns the corresponding 'divs' (dot representation) based on the die's value passed as a prop. 
+                    This grid-based approach enabled me to display the appropriate dot representation for each die, 
+                    resulting in a visually appealing and intuitive interface for the user.
+                </li>
+                <li>
+                    For saving and displaying the lowest number of rolls and the current number of rolls, 
+                    I used the 'useState' hook to manage the 'lowestNum' and 'countRolls' states. 
+                    I employed the 'findLowestNum()' function to compare and update the 'lowestNum' state. 
+                    The 'lowestNum' state is then saved in local storage, and both 'lowestNum' and 'countRolls' are displayed on the UI using conditional rendering.
+                </li>
+            </ol>
+        </p>
+        <h3 class="project-categories">Learning outcomes</h3>
+        <p>
+            Through this project, I have gained valuable experience and honed various skills:
+            <ul class="project-skills-list">
+                <li><span class="project-skills">Problem-solving:</span> Strengthened my abilities to identify and tackle challenges encountered during the development process.</li>
+                <li><span class="project-skills">React.js proficiency:</span> Enhanced my expertise in core concepts such as components, state management, and hooks like useState and useEffect.</li>
+                <li><span class="project-skills">Custom reusable components:</span> Acquired skills to create modular components like the 'Die' component, improving code organization and modularity.</li>
+                <li><span class="project-skills">Unique ID generation:</span> Utilized the 'nanoid' library for generating unique IDs for each die, enabling smooth interaction with individual dice elements.</li>
+                <li><span class="project-skills">Grid layout design:</span> Created visually appealing die face representations using grid layouts for accurate dot positioning.</li>
+                <li><span class="project-skills">Conditional rendering:</span> Mastered techniques to display different UI elements depending on the game state, such as showing 'New Game' when tenzies are achieved or displaying the current number of rolls.</li>
+                <li><span class="project-skills">Data persistence:</span> Investigated the use of local storage to save and retrieve the lowest number of rolls across multiple sessions.</li>
+            </ul>
+        </p>
+        <h5 class="project-categories project-source-code">Project source code and website URL:</h5>
+        <ul class="sources-list">
+            <li>
+                <span class="source">
+                    <a href="https://github.com/paulina-kottlewska/tenzies" target="_blank">Github</a>
+                </span>
+            </li>
+            <li> 
+                <span class="source">
+                    <a href="https://tenzies-dice-game-pk.netlify.app/" target="_blank">Live Site</a>
+                </span>
+            </li>
+        </ul>     
+    </div>
+    
+    <footer>
+        <a href="mailto:paulina@kottlewska.dev" class="footer-link">paulina.kottlewska@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://www.linkedin.com/in/paulina-kottlewska-557933215" target="_blank">
+                    <i class="fab fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a class="social-list-link" href="https://github.com/paulina-kottlewska" target="_blank">
+                    <i class="fab fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

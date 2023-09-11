@@ -50,6 +50,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 section {
     padding: 2em 1.3em;
@@ -196,9 +197,6 @@ header {
 .hamburger::after {bottom: 6px}
 
 @media (min-width: 900px) {
-    body {
-        overflow-x: hidden;
-    }
     .nav {
         position: absolute;
         bottom: unset;

@@ -235,6 +235,7 @@ header {
     position: relative;
     text-align: center;
     margin-top: 3em;
+    overflow-x: hidden;
 }
 .section-subtitle-intro {
     display: inline-block; 
@@ -257,6 +258,7 @@ header {
         "title img"
         "subtitle img";
         grid-template-columns: max-content min-content;
+        overflow-x: visible;
     }
     .intro-img, .project-intro-img {
         grid-area: img;

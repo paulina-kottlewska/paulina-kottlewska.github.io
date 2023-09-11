@@ -78,12 +78,8 @@ strong {
     letter-spacing: 0.1em;
     transition: 200ms ease-in-out;
 }
-.btn:hover {
-    transform: scale(1.1);
-}
 
 /* Typography */
-
 h1, h2, h3 {
     line-height: 1.1;
     margin: 0;
@@ -627,11 +623,6 @@ footer a {
     font-weight: 300;
     margin-left: 0.3em;
 }
-.source a:hover {
-    display: inline-block;
-    transform: scale(1.1);
-    font-weight: bold;
-}
 
 @media (min-width: 700px) {
     .project-categories {
@@ -665,6 +656,19 @@ footer a {
     }
 }
 
+/* Hover effect */
+@media (hover: hover) and (pointer: fine) {
+    .btn:hover {
+        transform: scale(1.1);
+    }
+    .source a:hover {
+        display: inline-block;
+        transform: scale(1.1);
+        font-weight: bold;
+    }
+}
+
+/* Animation styles */
 .initial-slide-left {
     transform: translateX(-150%);
     transition: transform 0.8s ease-out;

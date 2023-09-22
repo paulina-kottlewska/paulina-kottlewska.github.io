@@ -104,7 +104,7 @@ h3 { font-size: var(--fs-h3) }
     font-size: var(--fs-h4);
     border-radius: 1em;
 }
-.section-subtitle-intro, .section-subtitle-about {
+.section-subtitle-intro {
     border-bottom: 7px solid var(--clr-accent);
     font-family: var(--ff-secondary);
     padding: .25em .7em;
@@ -324,10 +324,7 @@ header {
     .about-me {
         margin-top: 5em; 
     }
-    .section-subtitle-about {
-        padding: 0.2em;
-    }
-    .section-title-about, .section-subtitle-about {
+    .section-title-about {
         text-align: left;
     }
     .about-me-body {
@@ -338,12 +335,6 @@ header {
 @media(min-width: 900px) {
     .about-container {
         padding: 3em 1em;
-    }
-}
-
-@media (min-width: 970px) {
-    .section-subtitle-about {
-        display: inline;
     }
 }
 
